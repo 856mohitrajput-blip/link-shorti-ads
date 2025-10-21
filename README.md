@@ -1,1 +1,1 @@
-# link-shorti-ads
+# LinkShorti - URL Shortener with Monetization Flow
