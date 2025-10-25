@@ -5,7 +5,7 @@ import { CheckCircle, Zap, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
 
 // NOTE: This variable is used for display purposes only, matching your original file structure.
-const NEXT_PUBLIC_BASE_URL = "https://link-flow.com";
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const FooterBranding = () => (
     <footer className="mt-12 w-full max-w-5xl text-center text-sm text-gray-400 border-t border-gray-200 pt-6">
@@ -16,14 +16,14 @@ const FooterBranding = () => (
 
 const BrandingLandingPage = () => (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-gray-900 p-4 sm:p-6 md:p-12">
-        
+
         {/* Header Section */}
         <header className="text-center mb-10 md:mb-16">
             {/* Logo */}
             <div className="mb-8">
-                <Image 
-                    src="/logo.jpg" 
-                    alt="LinkShorti Logo" 
+                <Image
+                    src="/logo.jpg"
+                    alt="LinkShorti Logo"
                     width={96}
                     height={96}
                     className="w-24 h-24 mx-auto rounded-2xl shadow-lg object-cover"
@@ -39,7 +39,7 @@ const BrandingLandingPage = () => (
 
         {/* Feature Grid */}
         <section className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl w-full">
-            
+
             {/* Feature 1: Security */}
             <div className="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/70 transition-all duration-300 transform hover:scale-[1.02] border-t-4 border-indigo-500">
                 <CheckCircle className="w-10 h-10 text-indigo-500 mb-4 stroke-[1.5]" />
@@ -48,7 +48,7 @@ const BrandingLandingPage = () => (
                     Your destination link is protected and delivered safely after a minimal, value-added content sequence. We ensure every step is fast and secure.
                 </p>
             </div>
-            
+
             {/* Feature 2: Monetization */}
             <div className="bg-white p-8 rounded-3xl shadow-2xl shadow-cyan-100/70 transition-all duration-300 transform hover:scale-[1.02] border-t-4 border-cyan-500">
                 <Zap className="w-10 h-10 text-cyan-500 mb-4 stroke-[1.5]" />
@@ -57,7 +57,7 @@ const BrandingLandingPage = () => (
                     We connect users to carefully selected high-value offers (Crypto, Finance, Health) to generate passive income for the link creators.
                 </p>
             </div>
-            
+
             {/* Feature 3: Engagement */}
             <div className="bg-white p-8 rounded-3xl shadow-2xl shadow-green-100/70 transition-all duration-300 transform hover:scale-[1.02] border-t-4 border-green-500">
                 <TrendingUp className="w-10 h-10 text-green-500 mb-4 stroke-[1.5]" />
@@ -80,7 +80,7 @@ const BrandingLandingPage = () => (
                 <span className="text-gray-400">{NEXT_PUBLIC_BASE_URL}</span>/<span className="font-bold text-indigo-900">[short-code]</span>
             </code>
         </div>
-        
+
         <FooterBranding />
     </div>
 );
